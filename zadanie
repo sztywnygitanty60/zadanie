@@ -1,0 +1,30 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class Koty { 
+public:
+	string rasa;
+	string imie;
+	int wiek;
+};
+ 
+int main()
+{
+	Koty*kot_macka= new Koty;
+	kot_macka->imie = "szczurson";
+	kot_macka->rasa = "brytyjski"; 
+	kot_macka->wiek = 5;
+ 
+	Koty *kot_adama = new Koty;
+	(*kot_adama).imie = "rurson";
+	(*kot_adama).rasa = "egipski";
+	(*kot_adama).wiek = 16;
+	cout << "Kot macka ma na imie:" << kot_macka->imie << endl;
+	cout<<"Kot macka jest rasy:" << kot_macka->rasa << endl;
+	cout << "Kot macka ma:" << kot_macka->wiek << "lat" << endl;
+	cout<<"Kot adama ma na imie: "<<(*kot_adama). imie<<endl;
+	cout<<"Kot adama jest rasy:"<<(*kot_adama).rasa<<endl;
+	cout<<"Kot adama ma:"<<(*kot_adama).wiek<< " lat "<<endl;
+	delete kot_macka;
+return 0;
+}
